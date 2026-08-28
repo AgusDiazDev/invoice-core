@@ -14,14 +14,14 @@ public class Invoice : BaseEntity
     
     private Invoice(){}   
 
-    public static Invoice Create(Guid ClientId, Guid PriceListId, decimal Total, DateTime Date, string Status)
+    public static Invoice Create(int ClientId, int PriceListId, decimal Total, DateTime Date, string Status)
     {
-        if(ClientId == Guid.Empty)
+        if(ClientId == 0)
         {
             throw new ArgumentException("ClientId cannot be empty");
         }
 
-        if(PriceListId == Guid.Empty)
+        if(PriceListId == 0)
         {
             throw new ArgumentException("PriceListId cannot be empty");
         }

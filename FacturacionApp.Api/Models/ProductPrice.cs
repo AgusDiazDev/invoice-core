@@ -4,13 +4,13 @@ namespace FacturacionApp.Api.Models;
 
 public class ProductPrice : BaseEntity
 {
-    public Guid ProductId { get; private set; }
-    public Guid PriceListId { get; private set; }
+    public int ProductId { get; private set; }
+    public int PriceListId { get; private set; }
     public decimal Price { get; private set; }
 
     private ProductPrice(){}
 
-    public static ProductPrice Create(Guid ProductId, Guid PriceListId, decimal Price)
+    public static ProductPrice Create(int ProductId, int PriceListId, decimal Price)
     {
         if(Price < 0)
         {

@@ -12,14 +12,14 @@ public class InvoiceItem : BaseEntity
 
     private InvoiceItem(){}
 
-    public static InvoiceItem Create(Guid InvoiceId, Guid ProductId, int Quantity, decimal SubTotal, decimal Total)
+    public static InvoiceItem Create(int InvoiceId, int ProductId, int Quantity, decimal SubTotal, decimal Total)
     {
-        if(InvoiceId == Guid.Empty)
+        if(InvoiceId == 0)
         {
             throw new ArgumentException("InvoiceId cannot be empty");
         }
 
-        if(ProductId == Guid.Empty)
+        if(ProductId == 0)
         {
             throw new ArgumentException("ProductId cannot be empty");
         }
