@@ -84,6 +84,6 @@ _ReSharper*/
 
 .agents
 
+FacturacionApp.Api/appsettings.Development.json
+FacturacionApp.Api/appsettings.json
 
-Services/appsettings.Development.json
-appsettings.Development.json
