@@ -83,3 +83,7 @@ _ReSharper*/
 *.sap
 
 .agents
+
+
+Services/appsettings.Development.json
+appsettings.Development.json
