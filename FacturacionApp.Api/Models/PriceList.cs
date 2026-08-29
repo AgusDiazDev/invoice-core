@@ -4,7 +4,7 @@ namespace FacturacionApp.Api.Models;
 
 public class PriceList : BaseEntity
 {
-    public string Name { get; private set; }
+    public string Name { get; private set; } = string.Empty;
     public bool IsActive { get; private set; } = true;
 
     private PriceList(){}

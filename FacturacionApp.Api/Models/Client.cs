@@ -27,7 +27,7 @@ public class Client : BaseEntity
             throw new ArgumentException("Name cannot be empty");
         }
 
-        if(string.IsNullOrWhiteSpace(TaxId))
+        if(string.IsNullOrWhiteSpace(taxId))
         {
             throw new ArgumentException("TaxId cannot be empty");
         }

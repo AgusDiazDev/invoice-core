@@ -4,8 +4,8 @@ namespace FacturacionApp.Api.Models;
 
 public class InvoiceItem : BaseEntity
 {
-    public Guid InvoiceId { get; private set; }
-    public Guid ProductId { get; private set; }
+    public int InvoiceId { get; private set; }
+    public int ProductId { get; private set; }
     public int Quantity { get; private set; }
     public decimal SubTotal { get; private set; }
     public decimal Total { get; private set; }

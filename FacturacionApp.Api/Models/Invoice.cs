@@ -4,8 +4,8 @@ namespace FacturacionApp.Api.Models;
 
 public class Invoice : BaseEntity
 {
-    public Guid ClientId { get; private set; }
-    public Guid PriceListId { get; private set; }
+    public int ClientId { get; private set; }
+    public int PriceListId { get; private set; }
     public decimal Total { get; private set; }
     public DateTime Date { get; private set; }
     public string Status { get; private set; } = string.Empty;
