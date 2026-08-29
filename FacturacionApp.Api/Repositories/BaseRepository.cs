@@ -46,7 +46,7 @@ public class BaseRepository<TEntity> : IBaseRepository<TEntity> where TEntity : 
       await _context.SaveChangesAsync();
       Console.WriteLine("Eliminado con exito");
      }else{
-     Console.WriteLine("Entidad no encontrada");
+      Console.WriteLine("Entidad no encontrada");
      }
   }
 }

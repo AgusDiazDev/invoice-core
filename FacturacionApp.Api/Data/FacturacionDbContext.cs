@@ -3,9 +3,9 @@ using FacturacionApp.Api.Models;
 
 namespace FacturacionApp.Api.Data
 {
-    public class BillingDbContext : DbContext
+    public class FacturacionDbContext : DbContext
     {
-        public BillingDbContext(DbContextOptions<BillingDbContext> options) : base(options)
+        public FacturacionDbContext(DbContextOptions<FacturacionDbContext> options) : base(options)
         {
         }
 

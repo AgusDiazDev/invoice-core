@@ -8,8 +8,10 @@ var builder = WebApplication.CreateBuilder(args);
 // Learn more about configuring OpenAPI at https://aka.ms/aspnet/openapi
 builder.Services.AddOpenApi();
 
-builder.Services.AddDbContext<BillingDbContext>(options =>
+builder.Services.AddDbContext<FacturacionDbContext>(options =>
     options.UseSqlServer(builder.Configuration.GetConnectionString("BillingConnection")));
+
+builder.Services.AddScoped<IProductRepository, ProductRepository>();
 
 var app = builder.Build();
 
