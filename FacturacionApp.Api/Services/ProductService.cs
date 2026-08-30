@@ -21,7 +21,7 @@ namespace FacturacionApp.Api.Services{
 
         public async Task<Product?> GetProductByIdAsync(int id){
 
-            return await _productRepository.GetByIdAsync(id)
+            return await _productRepository.GetByIdAsync(id);
 
         }
 
@@ -40,6 +40,16 @@ namespace FacturacionApp.Api.Services{
                 await _productRepository.UpdateAsync(product);
             }
 
+        }
+
+        public async Task DeleteProductAsync(int id){
+            var existingProduct = await _productRepository.GetByIdAsync(id);
+            if(existingProduct != null){
+                await _productRepository.DeleteAsync(id);
+                Console.WriteLine("Producto eliminado con exito");
+            }else{
+                throw new Exception("Producto no encontrado");
+            }
         }
     }
 }
